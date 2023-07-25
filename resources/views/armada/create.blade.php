@@ -3,7 +3,7 @@
 @section('title', 'Armada | Tambah Data')
 
 @section('content')
-    <form action="/armada/doupdate" method="POST">
+    <form action="/armada/docreate" method="POST">
         @csrf
         <div class="card">
             <div class="card-header">
