@@ -5,8 +5,8 @@
 @section('content')
     <a href="/armada/create" class="btn btn-success my-2">Tambah Armada</a>
 
-    <table class="table table-bordered table-collapsed table-striped">
-        <thead>
+    <table class="table table-bordered table-collapsed table-striped table-hover">
+        <thead class="table-info">
             <th>No.</th>
             <th>Plat</th>
             <th>Jenis Mobil</th>
