@@ -3,8 +3,9 @@
 @section('title', 'Armada | Ubah Data')
 
 @section('content')
-    <form action="/armada/doupdate/{{$armada->id}}" method="POST">
+    <form action="/armada/{{$armada->id}}" method="POST">
         @csrf
+        @method('PUT')
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Armada</h3>

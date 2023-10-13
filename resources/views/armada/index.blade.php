@@ -28,8 +28,13 @@
                     <td>{{ $armada->kecepatan_muatan }}</td>
                     <td>{{ $armada->status_keaktifan }}</td>
                     <td>
-                        <a href="armada/update/{{ $armada->id }}" class="btn btn-sm btn-primary">Ubah</a>
-                        <a href="armada/delete/{{ $armada->id }}" class="btn btn-sm btn-danger">Hapus</a>
+                        <form action="/armada/{{ $armada->id }}" method="POST">
+                            <a href="armada/{{ $armada->id }}" class="btn btn-sm btn-warning">Lihat</a>
+                            <a href="armada/{{ $armada->id }}/edit" class="btn btn-sm btn-primary">Ubah</a>
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

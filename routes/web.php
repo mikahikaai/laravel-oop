@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArmadaController;
+use App\Models\Armada;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,11 @@ Route::get('/', function(){
     return view('index');
 } );
 
-Route::get('/armada', [ArmadaController::class, 'home']);
-Route::get('/armada/create', [ArmadaController::class, 'create']);
-Route::post('/armada/docreate', [ArmadaController::class, 'docreate']);
-Route::get('/armada/update/{id}', [ArmadaController::class, 'update']);
-Route::post('/armada/doupdate/{id}', [ArmadaController::class, 'doupdate']);
-Route::get('/armada/delete/{id}', [ArmadaController::class, 'delete']);
+Route::resources([
+    '/armada' => ArmadaController::class
+]);
+// Route::get('/armada/create', [ArmadaController::class, 'create']);
+// Route::post('/armada/docreate', [ArmadaController::class, 'docreate']);
+// Route::get('/armada/update/{id}', [ArmadaController::class, 'update']);
+// Route::post('/armada/doupdate/{id}', [ArmadaController::class, 'doupdate']);
+// Route::get('/armada/delete/{id}', [ArmadaController::class, 'delete']);
